@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kendra's Mobile Nurse Services — Choose a Version</title>
+  <meta name="description" content="Preview the two website designs for Kendra's Mobile Nurse Services & Medical Courier.">
+  <style>
+    :root {
+      --ink: #0f1b1a;
+      --mut: #5b6f6c;
+      --line: #dfe7e5;
+      --bg: #f6f8f8;
+      --teal: #0c6f6e;
+      --lime: #c8f542;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 28px 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+    header h1 { font-size: 1.25rem; letter-spacing: .02em; }
+    header p { color: var(--mut); font-size: .9rem; margin-top: 6px; }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 56px 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      align-content: center;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(15, 27, 26, .25); }
+    .preview { height: 220px; position: relative; overflow: hidden; }
+    .preview-industrial { background: #0b0e0d; }
+    .preview-industrial::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(233, 240, 238, .06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(233, 240, 238, .06) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    .preview-industrial .bar { position: absolute; left: 24px; right: 40%; height: 10px; background: #1d2522; }
+    .preview-industrial .bar.acc { background: var(--lime); }
+    .preview-industrial .tag {
+      position: absolute; top: 20px; left: 24px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 10px; letter-spacing: .12em;
+      color: var(--lime); border: 1px solid var(--lime);
+      padding: 4px 8px;
+    }
+    .preview-contemporary { background: linear-gradient(150deg, #eaf6f4, #ffffff 60%); }
+    .preview-contemporary .blob {
+      position: absolute; width: 150px; height: 150px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #d8efec, #9fd3cf);
+      top: -40px; right: -30px;
+    }
+    .preview-contemporary .chip {
+      position: absolute; left: 24px; top: 24px; right: 30%;
+      background: #fff; border-radius: 14px; padding: 12px 14px;
+      box-shadow: 0 10px 24px -12px rgba(12, 111, 110, .35);
+    }
+    .preview-contemporary .chip .row { height: 8px; border-radius: 99px; background: #dceae8; margin-bottom: 8px; }
+    .preview-contemporary .chip .row.hl { background: var(--teal); width: 60%; }
+    .body { padding: 24px; }
+    .body h2 { font-size: 1.15rem; margin-bottom: 8px; }
+    .body p { color: var(--mut); font-size: .92rem; line-height: 1.55; }
+    .go {
+      margin-top: 16px; display: inline-flex; align-items: center; gap: 8px;
+      font-weight: 600; font-size: .92rem; color: var(--teal);
+    }
+    footer { text-align: center; padding: 20px; color: var(--mut); font-size: .82rem; border-top: 1px solid var(--line); background: #fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kendra's Mobile Nurse Services &amp; Medical Courier</h1>
+    <p>Two design directions for the new website — open each one, then tell me which direction to refine.</p>
+  </header>
+  <main>
+    <a class="card" href="tech-industrial/index.html">
+      <div class="preview preview-industrial">
+        <span class="tag">DIV 01 // DISPATCH</span>
+        <span class="bar" style="top:64px"></span>
+        <span class="bar" style="top:84px; right:55%"></span>
+        <span class="bar acc" style="top:112px; right:60%"></span>
+      </div>
+      <div class="body">
+        <h2>Tech Industrial</h2>
+        <p>Dark dispatch-console aesthetic. Monospace data labels, grid overlays, chamfered panels, lime safety accents. Leans into the logistics side — courier-grade precision.</p>
+        <span class="go">Open this version &rarr;</span>
+      </div>
+    </a>
+    <a class="card" href="contemporary/index.html">
+      <div class="preview preview-contemporary">
+        <div class="blob"></div>
+        <div class="chip">
+          <div class="row hl"></div>
+          <div class="row"></div>
+          <div class="row" style="width:80%"></div>
+        </div>
+      </div>
+      <div class="body">
+        <h2>Professional Contemporary</h2>
+        <p>Light, warm healthcare look. Teal and amber palette, rounded cards, soft gradients, friendly typography. Leans into the nursing side — calm and trustworthy.</p>
+        <span class="go">Open this version &rarr;</span>
+      </div>
+    </a>
+  </main>
+  <footer>Placeholder contact details are used throughout — swap in the real phone, email, and service area before going live.</footer>
+</body>
+</html>
